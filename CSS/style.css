@@ -3,19 +3,17 @@ body {
 }
 
 .main {
-    display: grid;
-    grid-template-areas: "tittle"
-                          "task";
-}
-
-.cont-tittle {
-    grid-area: tittle;
-    background-color: #06183D;
     display: flex;
-    justify-content: center;
+    justify-self: center;
+    border-radius: 10px;
+    width: 45%;
+    height: 530px;
+    background-color: #DCD7C9;
+    flex-direction: column;
     align-items: center;
-    height: 230px;
-    border-radius: 5px;
+    min-width: 330px;
+    margin: 20px auto;
+    border-radius: 15px;
 }
 
 .tittle {
@@ -24,52 +22,41 @@ body {
     color: white;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    height: 100%;
-    background-color: red;
+    width: 100%;
+    height: 40%;
+    background-color: #125B50;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
-.cont-task {
-    grid-area: task;
-    margin-top: 20px;
-    display: flex;
-    justify-self: center;
-    border-radius: 10px;
-    width: 50%;
-    height: 450px;
-    background-color: #DCD7C9;
-    flex-direction: column;
-    align-items: center;
-    min-width: 330px;
-}
 
-.cont-task .pruebaTask {
+.main .pruebaTask {
     width: 90%;
-    height: 70px;
+    height: 43px;
     margin-top: 20px;
     display: flex;
     background-color: white;
-    border-radius: 15px;
+    border-radius: 10px;
     justify-content: flex-end;
-
 }
 
-.cont-task .cont-add {
+.main .cont-add {
     display: flex;
-    width: 90%;
+    width: 95%;
     height: 50px;
     margin: 10px 0px;
-    background-color: red;
     border-radius: 10px;
 }
 
 .task {
     background-color: #06183D;
     display: flex;
+    padding-bottom: 20px;
     width: 100%;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 300px;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .cont-add input {
@@ -79,26 +66,34 @@ body {
     padding: 10px;
 }
 
-.cont-task .add_task {
+.main .add_task {
     background-color: #A90000;
     color: white;
     border-radius: 10px;
     width: 100px;
-    height: 40px;
+    height: 45px;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .pruebaTask .icon_done, .pruebaTask .icon_delete {
     display: flex;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 47px;
+    justify-self: center;
+    align-self: center;
 }
 
-.cont-time_icons {
+.icon_delete {
+    border-top-right-radius: 10px;
+    border-end-end-radius: 10px;
+}
+
+.cont-buttons {
     display: flex;
-    width: 20%;
-    background-color: darkred;
-    height: 100px;
 }
 
 .icon_done {
@@ -109,8 +104,3 @@ body {
     background-color: red;
 }
 
-.time {
-    align-self: flex-end;
-    width: 100%;
-    background-color: green;
-}
